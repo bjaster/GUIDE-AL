@@ -1,0 +1,56 @@
+[build-system]
+# The build system section is needed in order to workaround the side-effect introduced
+# by recent setup tools version. The recent setuptools version update (64.0.0) broke
+# paths of editable installations and we have to pin it to 63.4.3 version
+# The problem is tracked (and this limitation might be removed if it is solved) in:
+# https://github.com/pypa/setuptools/issues/3548
+requires = [
+  "setuptools==63.4.3",
+  "setuptools_scm[toml]>=3.4",
+  "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+# See https://github.com/pypa/setuptools_scm/#configuration-parameters for available
+# options
+
+write_to = "guide_active_learning/_version.py"
+version_scheme = "guess-next-dev"
+local_scheme = "node-and-timestamp"
+
+[tool.usort]
+
+categories = ["future", "standard_library", "third_party", "pytorch", "first_party"]
+first_party_detection = false
+
+[tool.usort.known]
+
+third_party = ["numpy"]
+pytorch = ["torch", "torchvision"]
+first_party = ["ActiveLearning"]
+
+[tool.black]
+# See https://black.readthedocs.io/en/stable/usage_and_configuration/index.html for
+# available options
+
+line-length = 88
+target-version = ["py38"]
+exclude = '''
+/(
+    \.git
+  | \.github
+  | \.venv
+  | \.eggs
+  | \.mypy_cache
+  | \.pytest_cache
+  | \.tox
+  | __pycache__
+  | build
+  | docs/build
+)/
+'''
+
+[tool.check-wheel-contents]
+# See https://github.com/jwodder/check-wheel-contents/issues/2
+ignore = "W002"
