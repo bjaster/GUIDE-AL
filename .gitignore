@@ -140,3 +140,4 @@ devEval
 
 # result folder
 guide_active_learning/Data/result
+guide_active_learning/Data/model
