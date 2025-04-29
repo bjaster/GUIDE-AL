@@ -3,8 +3,7 @@ Official code for "Pool-based Active Learning with Decision Trees: Incorporate t
 Tree Structure to Explore and  Exploit" 
 ([M. Schöne](https://www.researchgate.net/profile/Marvin-Schoene), 
 [B. Jaster](https://www.researchgate.net/profile/Bjarne-Jaster), 
-[J. Bültemeier](https://www.researchgate.net/profile/Julian-Bueltemeier-2),  
-J. Köster, C. Holst, M. Kohlhase (Accepted for IEEE SSCI'25) \[[pdf]()\]
+[J. Bültemeier](https://www.researchgate.net/profile/Julian-Bueltemeier-2), J. Köster, C. Holst, M. Kohlhase (Accepted for IEEE SSCI'25) \[[pdf](https://doi.org/10.1109/CITREx64975.2025.10974940)\]
 
 
 # Installation
